@@ -16,7 +16,7 @@ FACEBOOK: https://www.facebook.com/themefisher
 /*=== MEDIA QUERY ===*/
 @import url("https://fonts.googleapis.com/css?family=Lora:400,400i|Open+Sans:300,400,600,700,800");
 body {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Poppins", sans-serif;
   background-color: #FFFAE3;
   -webkit-font-smoothing: antialiased;
 }
@@ -26,7 +26,7 @@ html {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Poppins", sans-serif;
   color: #5D576B;
   font-weight: 300;
 }
@@ -60,7 +60,7 @@ cite {
 }
 
 .lora {
-  font-family: "Lora", serif;
+  font-family: "Poppins", sans-serif;
   font-style: italic;
 }
 
@@ -425,7 +425,7 @@ button:focus,
 
 .main-nav .navbar-nav .nav-item {
   position: relative;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 .main-nav .navbar-nav .nav-item .nav-link {
@@ -993,7 +993,7 @@ button:focus,
 }
 
 .feature .testimonial p {
-  font-family: "Lora", serif;
+  font-family: "Poppins", sans-serif;
   margin-bottom: 10px;
   font-style: italic;
   color: #242424;
@@ -1127,7 +1127,7 @@ button:focus,
 }
 
 .testimonial .testimonial-slider .item .block p {
-  font-family: "Lora", serif;
+  font-family: "Poppins", sans-serif;
   font-style: italic;
   color: #888888;
 }
@@ -1771,7 +1771,7 @@ hr {
   font-size: 200px;
   font-weight: 400;
   line-height: 266px;
-  font-family: "Lora", serif;
+  font-family: "Poppins", sans-serif;
 }
 
 .error-page .center .block p {
