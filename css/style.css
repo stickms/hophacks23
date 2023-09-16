@@ -151,6 +151,7 @@ a {
 
 a:focus,
 a:hover {
+  color: #fcfcfc;
   text-decoration: none;
 }
 
@@ -361,17 +362,17 @@ button:focus,
   padding: 17px 38px;
   border-radius: 25px;
   background: #F7567C;
-  color: #fff;
+  color: #fcfcfc;
   outline: none;
 }
 
 .btn-main-md:hover {
   color: #fff;
+  box-shadow: inset 0px 0px 5px #fcfcfc;
 }
 
 .btn-main-md:focus {
   color: #fff;
-  box-shadow: none;
 }
 
 .btn-main-sm {
@@ -400,7 +401,7 @@ button:focus,
 .btn-rounded-icon {
   border-radius: 100px;
   color: #fff;
-  border: 1px solid #fff;
+  border: 2px solid #fff;
   padding: 13px 50px;
 }
 
