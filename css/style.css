@@ -151,7 +151,6 @@ a {
 
 a:focus,
 a:hover {
-  color: #2e7eed;
   text-decoration: none;
 }
 
@@ -343,9 +342,9 @@ button:focus,
 
 .btn-main {
   padding: 25px 45px;
-  border-radius: 3px;
-  background: #2e7eed;
-  color: #fff;
+  border-radius: 25px;
+  background: #5D576B;
+  color: #fcfcfc;
   outline: none;
 }
 
@@ -630,33 +629,6 @@ button:focus,
   .footer-main .block {
     margin-bottom: 40px;
   }
-}
-
-.footer-main .block-2 h6 {
-  font-weight: bold;
-  font-size: 14px;
-  text-transform: uppercase;
-  color: #fff;
-  margin-bottom: 25px;
-}
-
-.footer-main .block-2 ul {
-  padding: 0;
-}
-
-.footer-main .block-2 ul li {
-  margin-bottom: 10px;
-  list-style: none;
-}
-
-.footer-main .block-2 ul li a {
-  font-size: 14px;
-  color: #6f6f71;
-  transition: .2s ease;
-}
-
-.footer-main .block-2 ul li a:hover {
-  color: #fff;
 }
 
 .footer-classic {
