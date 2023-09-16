@@ -17,12 +17,17 @@ FACEBOOK: https://www.facebook.com/themefisher
 @import url("https://fonts.googleapis.com/css?family=Lora:400,400i|Open+Sans:300,400,600,700,800");
 body {
   font-family: "Open Sans", sans-serif;
+  background-color: #FFFAE3;
   -webkit-font-smoothing: antialiased;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: "Open Sans", sans-serif;
-  color: #000;
+  color: #5D576B;
   font-weight: 300;
 }
 
@@ -146,16 +151,16 @@ a {
 
 a:focus,
 a:hover {
-  color: #2e7eed;
+  color: #fcfcfc;
   text-decoration: none;
 }
 
 .bg-gray {
-  background: #fafafa;
+  background: #FFFAE3;
 }
 
 .bg-blue {
-  background: #2e7eed;
+  background: #99E1D9;
 }
 
 .bg-1 {
@@ -338,9 +343,9 @@ button:focus,
 
 .btn-main {
   padding: 25px 45px;
-  border-radius: 3px;
-  background: #2e7eed;
-  color: #fff;
+  border-radius: 25px;
+  background: #5D576B;
+  color: #fcfcfc;
   outline: none;
 }
 
@@ -355,19 +360,19 @@ button:focus,
 
 .btn-main-md {
   padding: 17px 38px;
-  border-radius: 3px;
-  background: #2e7eed;
-  color: #fff;
+  border-radius: 25px;
+  background: #F7567C;
+  color: #fcfcfc;
   outline: none;
 }
 
 .btn-main-md:hover {
   color: #fff;
+  box-shadow: inset 0px 0px 5px #fcfcfc;
 }
 
 .btn-main-md:focus {
   color: #fff;
-  box-shadow: none;
 }
 
 .btn-main-sm {
@@ -396,17 +401,26 @@ button:focus,
 .btn-rounded-icon {
   border-radius: 100px;
   color: #fff;
-  border: 1px solid #fff;
+  border: 2px solid #fff;
   padding: 13px 50px;
 }
 
 .main-nav {
-  background: #fff;
+  background: #99E1D9;
+  outline: 0.5px solid #5D576B;
   z-index: 1;
 }
 
 .main-nav .navbar-brand {
   padding: 0;
+  width: 50px;
+  height: 50px;
+}
+
+.navbar-brand img {
+  padding: 0;
+  width: 50px;
+  height: 50px;
 }
 
 .main-nav .navbar-nav .nav-item {
@@ -420,7 +434,7 @@ button:focus,
   font-size: 13px;
   text-transform: uppercase;
   font-weight: 600;
-  color: #000;
+  color: #5D576B;
   padding-left: 20px;
   padding-right: 20px;
   line-height: 45px;
@@ -437,12 +451,12 @@ button:focus,
 }
 
 .main-nav .navbar-nav .nav-item.active .nav-link {
-  color: #2e7eed;
+  color: #5D576B;
 }
 
 .main-nav .navbar-nav .nav-item.active .nav-link:before {
   content: '';
-  background: #2e7eed;
+  background: #5D576B;
   width: 60%;
   height: 2px;
   position: absolute;
@@ -582,8 +596,8 @@ button:focus,
 }
 
 .footer-main {
-  padding: 92px 0;
-  background: #1a1b1f;
+  padding: 50px 0;
+  background: #5D576B;
 }
 
 @media (max-width: 768px) {
@@ -593,7 +607,7 @@ button:focus,
 }
 
 .footer-main .block img {
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 .footer-main .block img #small-Apps {
@@ -616,33 +630,6 @@ button:focus,
   .footer-main .block {
     margin-bottom: 40px;
   }
-}
-
-.footer-main .block-2 h6 {
-  font-weight: bold;
-  font-size: 14px;
-  text-transform: uppercase;
-  color: #fff;
-  margin-bottom: 25px;
-}
-
-.footer-main .block-2 ul {
-  padding: 0;
-}
-
-.footer-main .block-2 ul li {
-  margin-bottom: 10px;
-  list-style: none;
-}
-
-.footer-main .block-2 ul li a {
-  font-size: 14px;
-  color: #6f6f71;
-  transition: .2s ease;
-}
-
-.footer-main .block-2 ul li a:hover {
-  color: #fff;
 }
 
 .footer-classic {
@@ -688,7 +675,8 @@ button:focus,
   height: 40px;
   line-height: 40px;
   text-align: center;
-  background: #2e7eed;
+  background: #F7567C;
+  border-radius: 25px;
   color: #fff;
   transition: 0.3s;
   z-index: 999556;
@@ -958,7 +946,6 @@ button:focus,
 
 .service .service-box {
   padding: 20px;
-  background: #fff;
   border-radius: 4px;
 }
 
@@ -977,13 +964,14 @@ button:focus,
 
 .service .service-box .service-item i {
   font-size: 20px;
-  color: #2e7eed;
+  color: #99E1D9;
   display: inline-block;
   margin-bottom: 10px;
 }
 
 .service .service-box .service-item p {
   font-size: 14px;
+  color: #867c9c;
 }
 
 .feature .feature-content h2,
@@ -1184,6 +1172,7 @@ button:focus,
 
 .shapes-container {
   position: absolute;
+  background-color: #99E1D9;
   overflow: hidden;
   top: 0;
   left: 0;
