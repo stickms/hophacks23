@@ -703,6 +703,7 @@ button:focus,
   line-height: 40px;
   text-align: center;
   background: #F7567C;
+  border-radius: 25px;
   color: #fff;
   transition: 0.3s;
   z-index: 999556;
