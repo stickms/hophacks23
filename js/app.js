@@ -119,7 +119,7 @@ function mouseReleasedButton() {
     gendiv = select('#generation');
     gendiv.show();
 
-    fetch(`https://${serverip}/`, {
+    fetch(`http://${serverip}/`, {
       method: 'POST',
       body: search.value(),
       headers: {
