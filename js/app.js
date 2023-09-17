@@ -6,7 +6,7 @@ let generation = null;
 let spantext = "";
 
 let option_labels = [
-  'Overall',
+  'Sentiment',
   'Challenge',
   'Workload',
   'Year'

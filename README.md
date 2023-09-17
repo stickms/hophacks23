@@ -11,4 +11,3 @@ Created for HopHacks Hackathon 2023
  * **Google Fonts**: http://fonts.google.com/
  * **AOS**: https://michalsnik.github.io/aos/
  * **Fancybox**: http://fancyapps.com/fancybox/
- * **Slick**: https://kenwheeler.github.io/slick/
