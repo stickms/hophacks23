@@ -5,6 +5,12 @@ let gendiv = null;
 
 let spantext = "";
 
+let serverip = '10.203.28.201:2212';
+
+function setServerIp(ip) {
+  serverip = ip;
+}
+
 let option_labels = [
   'Sentiment',
   'Challenge',
@@ -113,7 +119,16 @@ function mouseReleasedButton() {
     gendiv = select('#generation');
     gendiv.show();
 
-    spantext = "You should drop out, immediately!";
+    fetch(`http://${serverip}/`, {
+      method: 'POST',
+      body: search.value(),
+      headers: {
+        "Content-Type": "text/plain",
+      }
+    }).then((response) => response.json())
+    .then(js => {
+      spantext = js;
+    });
   }
 }
 
@@ -179,7 +194,7 @@ function animateText() {
       curchar = pleasewait.length;
     }
   } else if (stage == 2) { // delete generating text
-    if (curtime++ > deltaTime / 10) {
+    if (curtime++ > deltaTime / 30) {
       curtime = 0;
       curchar--;
     }
@@ -190,7 +205,7 @@ function animateText() {
       stage = 3;
     }
   } else { // now show the generated prompt
-    if (curchar < spantext.length && curtime++ > deltaTime / 20) {
+    if (curchar < spantext.length && curtime++ > deltaTime / 60) {
       curtime = 0;
       curchar++;
     }
