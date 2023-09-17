@@ -117,6 +117,11 @@ function mouseOverSlider() {
   for (let i = 0; i < options.length; i++) {
     const xoff = (i % 2 == 1 && windowWidth >= 1000) ? 250 : -50;
     const align = (i % 2 == 1) && windowWidth >= 1000 ? LEFT : RIGHT;
+
+    let textValue = `${option_labels[i]}: ${options[i].value()}`;
+    if (i != 3) {
+      textValue += '/5';
+    }
   
     strokeWeight(0);
     textSize(28);
@@ -124,7 +129,7 @@ function mouseOverSlider() {
     textStyle(BOLD);
     textAlign(align);
     fill('#FCFCFC');
-    text(`${option_labels[i]}: ${options[i].value()}`, options[i].x + xoff, options[i].y + 10);  
+    text(textValue, options[i].x + xoff, options[i].y + 10);  
   }
 }
 

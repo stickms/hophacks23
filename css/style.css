@@ -149,10 +149,14 @@ a {
   color: inherit;
 }
 
-a:focus,
-a:hover {
-  color: #fcfcfc;
+.list-inline-item a {
+  transition: transform 200ms ease-in-out;
+}
+
+.list-inline-item a:hover {
+  color:inherit;
   text-decoration: none;
+  transform: scale(1.05);
 }
 
 .bg-gray {
@@ -326,7 +330,7 @@ button:focus,
 }
 
 .btn {
-  text-transform: uppercase;
+  outline: none;
 }
 
 .btn-download {
@@ -350,7 +354,8 @@ button:focus,
 }
 
 .btn-main:hover {
-  color: #fff;
+  color: #fcfcfc;
+  transform: scale(1.05);
 }
 
 .btn-main:focus {
@@ -364,15 +369,19 @@ button:focus,
   background: #F7567C;
   color: #fcfcfc;
   outline: none;
+  transition: transform 200ms ease-in-out;
 }
 
 .btn-main-md:hover {
-  color: #fff;
-  box-shadow: inset 0px 0px 5px #fcfcfc;
+  color: #fcfcfc;
+  transform: scale(1.05);
 }
 
 .btn-main-md:focus {
-  color: #fff;
+  color: #fcfcfc;
+  filter: brightness(80%);
+  outline:none;
+  box-shadow: none;
 }
 
 .btn-main-sm {
@@ -400,9 +409,24 @@ button:focus,
 
 .btn-rounded-icon {
   border-radius: 100px;
-  color: #fff;
-  border: 2px solid #fff;
+  color: #fcfcfc;
+  border: 2px solid #fcfcfc;
   padding: 13px 50px;
+  transition: transform 200ms ease-in-out;
+  text-decoration: none;
+}
+
+.btn-rounded-icon:hover {
+  color: #fcfcfc;
+  transform: scale(1.05);
+  text-decoration: none;
+}
+
+.btn-rounded-icon:active {
+  filter: brightness(80%);
+  text-decoration: none;
+  outline:none;
+  box-shadow: none;
 }
 
 .main-nav {
@@ -421,18 +445,38 @@ button:focus,
   padding: 0;
   width: 50px;
   height: 50px;
+  transition: transform 200ms ease-in-out;
+}
+
+.navbar-brand img:hover {
+  transform: scale(1.05);
+}
+
+.navbar-brand img:active {
+  filter: brightness(80%);
 }
 
 .main-nav .navbar-nav .nav-item {
   position: relative;
   font-family: "Poppins", sans-serif;
+  text-decoration: none;
+  transition: transform 50ms ease-in-out;
+}
+
+.nav-item:hover {
+  text-decoration: none;
+  transform: scale(1.05);
+}
+
+.nav-item:active {
+  text-decoration: none;
+  filter:brightness(80%);
 }
 
 .main-nav .navbar-nav .nav-item .nav-link {
   position: relative;
   text-align: center;
   font-size: 13px;
-  text-transform: uppercase;
   font-weight: 600;
   color: #5D576B;
   padding-left: 20px;
@@ -662,7 +706,6 @@ button:focus,
   padding: 0 10px;
   display: block;
   font-weight: bold;
-  text-transform: uppercase;
   font-size: 14px;
   color: #000;
 }
@@ -2154,7 +2197,6 @@ hr {
 .coming-soon .block .count-down .syotimer-cell .syotimer-cell__unit {
   font-size: 20px;
   color: #6c6c6c;
-  text-transform: uppercase;
   font-weight: normal;
 }
 
