@@ -37,7 +37,7 @@ function setup() {
   logo = createImg('../images/logo.png', 'Jayway Logo');
   logo.size(100, 100);
   logo.mouseReleased(_ => {
-    if (!optioning && !generation) {
+    if (!optioning && !gendiv) {
       window.location.href = '../index.html';
     } else {
       window.location.href = '../app.html';
