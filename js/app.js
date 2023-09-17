@@ -1,7 +1,7 @@
 let search, button, logo;
 let options = [];
 let optioning = false;
-let generation = null;
+let gendiv = null;
 
 let spantext = "";
 
@@ -110,8 +110,8 @@ function mouseReleasedButton() {
     optioning = false;
     resulting = true;
 
-    generation = select('#generation');
-    generation.show();
+    gendiv = select('#generation');
+    gendiv.show();
 
     spantext = "You should drop out, immediately!";
   }
@@ -143,20 +143,60 @@ function mouseOverSlider() {
 
 let curchar = 0;
 let curtime = 0;
+let stage = 0;
 
 function animateText() {
-  if (!generation) {
+  if (!gendiv) {
     return;
   }
 
-  const display = spantext.slice(0, curchar);
+  const pleasewait = 'Generating response, this may take a while';
 
-  if (curtime++ > deltaTime / 20) {
-    curtime = 0;
-    curchar++;
+  if (stage == 0) { // generating the please wait text
+    if (curtime++ > deltaTime / 10) {
+      curtime = 0;
+      curchar++;
+    }
+
+    gendiv.html(`<span>${pleasewait.slice(0, curchar)}</span>`);
+
+    if (curchar == pleasewait.length) {
+      stage = 1;
+      curtime = 0;
+      curchar = 0;
+    }
+  } else if (stage == 1) { // generate waiting "periods"
+    if (curtime++ > deltaTime) {
+      curtime = 0;
+      curchar = ++curchar % 5;
+    }
+  
+    gendiv.html(`<span>${'Generating response, this may take a while' + '.'.repeat(curchar)}</span>`);
+
+    if (spantext.length > 0) {
+      stage = 2;
+      curtime = 0;
+      curchar = pleasewait.length;
+    }
+  } else if (stage == 2) { // delete generating text
+    if (curtime++ > deltaTime / 10) {
+      curtime = 0;
+      curchar--;
+    }
+
+    gendiv.html(`<span>${'Generating response, this may take a while'.slice(0, curchar)}</span>`);
+
+    if (curchar == 0) {
+      stage = 3;
+    }
+  } else { // now show the generated prompt
+    if (curchar < spantext.length && curtime++ > deltaTime / 20) {
+      curtime = 0;
+      curchar++;
+    }
+  
+    gendiv.html(`<span>${spantext.slice(0, curchar)}</span>`);  
   }
-
-  generation.html(`<span>${display}</span>`);
 }
 
 function handleCircles() {
