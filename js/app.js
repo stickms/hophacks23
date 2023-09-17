@@ -34,7 +34,15 @@ function setup() {
     };
   }
 
-  logo = loadImage('../images/logo.png');
+  logo = createImg('../images/logo.png', 'Jayway Logo');
+  logo.size(100, 100);
+  logo.mouseReleased(_ => {
+    if (!optioning && !generation) {
+      window.location.href = '../index.html';
+    } else {
+      window.location.href = '../app.html';
+    }
+  });
 
   search = createInput();
   search.attribute('placeholder', 'What\'s your ideal college experience?');
@@ -176,13 +184,11 @@ function handleCircles() {
   }
 }
 
-function draw() {
-  background('#99E1D9');
-
+function drawLogo() {
   let logox = windowWidth / 2 - 175;
   let logoy = Math.max(windowHeight / 2 - 200, 25);
 
-  image(logo, logox, logoy, 100, 100);
+  logo.position(logox, logoy);
 
   textSize(48);
   textFont('Poppins');
@@ -190,7 +196,18 @@ function draw() {
   textAlign(CENTER);
   fill('#FCFCFC');
   text('Jayway', logox + 225, logoy + 65);
+}
 
+function draw() {
+  background('#99E1D9');
+
+  if (search.value().length == 0) {
+    button.attribute('disabled', 'true');
+  } else {
+    button.removeAttribute('disabled');
+  }
+
+  drawLogo();
   handleCircles();
   mouseOverSlider();
   animateText();

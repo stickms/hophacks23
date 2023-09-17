@@ -33,6 +33,19 @@ body {
   padding: 25px;
 }
 
+img {
+  transition: transform 200ms ease-in-out;
+}
+
+img:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+img:active {
+  filter: brightness(80%);
+}
+
 input[type="text"] {
   border-radius: 25px;
   border: 0;
@@ -59,6 +72,12 @@ button:hover {
 
 button:active {
   filter: brightness(85%);
+}
+
+button:disabled {
+  background:gray;
+  cursor:not-allowed;
+  pointer-events: none;
 }
 
 input[type="range"] {
