@@ -29,7 +29,7 @@ body {
   color: #FCFCFC;
   font-weight: bold;
   font-family: "Poppins";
-  overflow-wrap: break-word;
+  /* overflow-wrap: break-word; */
   padding: 25px;
 }
 
