@@ -122,7 +122,7 @@ function mouseReleasedButton() {
     gendiv = select("#generation");
     gendiv.show();
 
-    fetch(`http://hophacks23-399208.uk.r.appspot.com/`, {
+    fetch(`https://hophacks23-399208.uk.r.appspot.com/`, {
       method: "POST",
       body: search.value(),
     })
